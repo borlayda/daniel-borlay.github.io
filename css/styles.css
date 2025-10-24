@@ -1,0 +1,55 @@
+
+:root{
+  --bg:#0b0d10;
+  --bg-soft:#111418;
+  --text:#e8eaed;
+  --muted:#b3b8c3;
+  --accent:#4e8cff;
+  --card:#0f1216;
+  --chip:#1b222c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background:var(--bg); color:var(--text);
+}
+header{
+  position:sticky; top:0; z-index:1000;
+  backdrop-filter:saturate(1.3) blur(6px);
+  background:color-mix(in oklab, var(--bg) 85%, #000);
+  border-bottom:1px solid #20242b;
+}
+.nav{
+  max-width:1080px; margin:0 auto; display:flex; gap:16px; align-items:center; padding:12px 20px;
+}
+.nav .brand{font-weight:700; letter-spacing:.3px}
+.nav a{color:var(--muted); text-decoration:none; padding:8px 10px; border-radius:8px}
+.nav a:hover{background:var(--chip); color:var(--text)}
+.container{max-width:1080px; margin:0 auto; padding:28px 20px}
+.hero{
+  display:grid; grid-template-columns:1.3fr .7fr; gap:28px; align-items:center; padding:48px 0;
+}
+.hero .title{font-size:clamp(28px,3.5vw,42px); line-height:1.15; margin:0}
+.hero .subtitle{margin:12px 0 0; color:var(--muted); font-size:clamp(15px,1.6vw,18px)}
+.card{background:var(--card); border:1px solid #20242b; border-radius:16px; padding:20px}
+.chips{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+.chip{background:var(--chip); color:#d6dbe6; padding:8px 12px; border-radius:999px; font-size:14px}
+.grid{display:grid; grid-template-columns:repeat(12,1fr); gap:20px}
+.section-title{font-size:22px; margin:6px 0 14px}
+footer{border-top:1px solid #20242b; padding:20px 0; color:var(--muted)}
+a.btn{display:inline-block; border:1px solid #2b3340; background:#111723; color:#dce3f1; text-decoration:none; padding:10px 14px; border-radius:10px}
+a.btn:hover{background:#162134}
+#themeToggle{margin-left:auto; cursor:pointer; border:1px solid #2b3340; padding:8px 12px; border-radius:10px; background:#101721; color:#dce3f1}
+section{padding:28px 0}
+.exp-role{display:flex; justify-content:space-between; gap:12px; align-items:baseline; flex-wrap:wrap}
+.exp-role h4{margin:0}
+.timeline{display:flex; flex-direction:column; gap:16px}
+.downloads{display:flex; gap:12px; flex-wrap:wrap}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+}
+.light{
+  --bg:#f7f9fc; --bg-soft:#fff; --text:#0d1117; --muted:#506074; --accent:#2f6bff;
+  --card:#ffffff; --chip:#e8eef9;
+}
